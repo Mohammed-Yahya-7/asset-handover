@@ -11,9 +11,13 @@
     body{font-family:'Cairo',Arial,sans-serif;background:var(--bg);min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:20px 16px 36px}
 
     /* ── Button ── */
-    .btn-download{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,#1a3a6b,#2563a8);color:#fff;font-family:'Cairo',sans-serif;font-size:16px;font-weight:700;padding:12px 36px;border:none;border-radius:10px;cursor:pointer;box-shadow:0 4px 20px rgba(26,58,107,.3);transition:transform .15s,box-shadow .15s;margin-bottom:20px}
+    .controls{display:flex;gap:15px;margin-bottom:20px}
+    .btn-download{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,#1a3a6b,#2563a8);color:#fff;font-family:'Cairo',sans-serif;font-size:16px;font-weight:700;padding:12px 36px;border:none;border-radius:10px;cursor:pointer;box-shadow:0 4px 20px rgba(26,58,107,.3);transition:transform .15s,box-shadow .15s}
     .btn-download:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(26,58,107,.4)}
     .btn-download svg{width:20px;height:20px;fill:#fff;flex-shrink:0}
+    .btn-reset{display:inline-flex;align-items:center;gap:10px;background:#e74c3c;color:#fff;font-family:'Cairo',sans-serif;font-size:16px;font-weight:700;padding:12px 24px;border:none;border-radius:10px;cursor:pointer;box-shadow:0 4px 20px rgba(231,76,60,.3);transition:transform .15s,box-shadow .15s}
+    .btn-reset:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(231,76,60,.4)}
+    .btn-reset svg{width:20px;height:20px;fill:#fff;flex-shrink:0}
 
     /* ── A4 Sheet ── */
     #form-sheet{
@@ -25,70 +29,71 @@
       padding:10mm 12mm 10mm 12mm;
       display:flex;
       flex-direction:column;
-      gap:2.5mm;
+      gap:4mm;
     }
 
     /* ── Header ── */
     .header{display:flex;justify-content:space-between;align-items:center;border-bottom:2.5px solid var(--primary);padding-bottom:2mm}
-    .header-meta{font-size:11px;font-weight:600;color:#111;line-height:1.7}
+    .header-meta{font-size:13px;font-weight:600;color:#111;line-height:1.7}
     .header-meta b{color:var(--primary);font-weight:800}
-    .header-meta input[type=date]{border:none;border-bottom:1.5px solid #999;outline:none;font-family:'Cairo',sans-serif;font-size:11px;font-weight:800;color:#000;background:transparent;cursor:pointer;width:115px}
+    .header-meta input[type=date]{border:none;border-bottom:1.5px solid #999;outline:none;font-family:'Cairo',sans-serif;font-size:13px;font-weight:800;color:#000;background:transparent;cursor:pointer;width:115px}
     .logo-img{height:50px;object-fit:contain;background:#fff}
 
     /* ── Title ── */
-    .form-title{text-align:center;font-size:18px;font-weight:800;color:var(--primary);letter-spacing:.3px}
+    .form-title{text-align:center;font-size:20px;font-weight:800;color:var(--primary);letter-spacing:.3px}
 
     /* ── Operation ── */
     .operation-row{display:flex;justify-content:space-between;align-items:center;padding:3mm 5mm;background:#eef2fa;border:1.5px solid #c5d3e8;border-radius:5px}
-    .operation-label{font-size:13px;font-weight:800;color:var(--primary)}
+    .operation-label{font-size:14.5px;font-weight:800;color:var(--primary)}
     .chk-group{display:flex;gap:20px}
-    .chk-item{display:flex;align-items:center;gap:5px;font-size:12.5px;font-weight:700;color:#111;cursor:pointer}
-    .chk-item input[type=radio]{width:15px;height:15px;accent-color:var(--primary);cursor:pointer}
+    .chk-item{display:flex;align-items:center;gap:5px;font-size:13.5px;font-weight:700;color:#111;cursor:pointer}
+    .chk-item input[type=radio]{width:16px;height:16px;accent-color:var(--primary);cursor:pointer}
 
     /* ── Section title ── */
-    .sec-title{font-size:12.5px;font-weight:800;color:var(--primary);border-right:4px solid var(--accent);padding-right:6px}
+    .sec-title{font-size:14px;font-weight:800;color:var(--primary);border-right:4px solid var(--accent);padding-right:6px}
 
     /* ── Info table ── */
-    .info-table{width:100%;border-collapse:collapse;font-size:11.5px}
-    .info-table td{border:1.5px solid var(--border);padding:3px 8px;vertical-align:middle}
-    .info-table .lbl{font-weight:800;color:var(--primary);background:#eef2fa;width:88px;white-space:nowrap;font-size:11.5px}
-    .info-table .val input{width:100%;border:none;outline:none;font-family:'Cairo',sans-serif;font-size:11.5px;font-weight:800;color:#000;background:transparent;padding:1px 0}
+    .info-table{width:100%;border-collapse:collapse;font-size:13px}
+    .info-table td{border:1.5px solid var(--border);padding:5px 8px;vertical-align:middle}
+    .info-table .lbl{font-weight:800;color:var(--primary);background:#eef2fa;width:88px;white-space:nowrap;font-size:13px}
+    .info-table .val input{width:100%;border:none;outline:none;font-family:'Cairo',sans-serif;font-size:13px;font-weight:800;color:#000;background:transparent;padding:1px 0}
 
     /* ── Assets table ── */
-    .assets-table{width:100%;border-collapse:collapse;font-size:11px}
-    .assets-table th{background:var(--primary);color:#fff;padding:5px 4px;text-align:center;border:1.5px solid var(--border);font-size:11.5px;font-weight:700}
-    .assets-table td{border:1.5px solid #444;padding:3px 4px;text-align:center;vertical-align:middle}
+    .assets-table{width:100%;border-collapse:collapse;font-size:12px}
+    .assets-table th{background:var(--primary);color:#fff;padding:7px 4px;text-align:center;border:1.5px solid var(--border);font-size:13px;font-weight:700}
+    .assets-table td{border:1.5px solid #444;padding:5px 4px;text-align:center;vertical-align:middle}
     .assets-table tr:nth-child(even) td{background:#f5f8fd}
-    .assets-table .a-name{text-align:right;font-weight:800;color:var(--primary);font-size:11.5px;white-space:nowrap}
-    .assets-table .a-num{font-weight:800;color:var(--primary);width:20px;font-size:11.5px}
-    .assets-table td input[type=text]{width:100%;border:none;outline:none;font-family:'Cairo',sans-serif;font-size:11px;font-weight:800;color:#000;background:transparent;text-align:center;padding:1px 0}
+    .assets-table .a-name{text-align:right;font-weight:800;color:var(--primary);font-size:13px;white-space:nowrap}
+    .assets-table .a-num{font-weight:800;color:var(--primary);width:20px;font-size:13px}
+    .assets-table td input[type=text], .cond-select{width:100%;border:none;outline:none;font-family:'Cairo',sans-serif;font-size:13px;font-weight:800;color:#000;background:transparent;text-align:center;padding:1px 0}
+    .cond-select{cursor:pointer;-webkit-appearance:none;appearance:none;text-align-last:center}
     .chk-cell{display:flex;justify-content:center;gap:8px}
-    .chk-cell label{display:flex;align-items:center;gap:3px;font-size:11px;font-weight:700;color:#111;cursor:pointer}
+    .chk-cell label{display:flex;align-items:center;gap:3px;font-size:12px;font-weight:700;color:#111;cursor:pointer}
     .chk-cell input[type=radio]{width:12px;height:12px;accent-color:var(--primary);cursor:pointer}
 
     /* ── Declaration ── */
-    .decl-box{border:1.5px solid var(--primary);border-radius:5px;padding:3.5mm 5mm;background:#f9fbff}
-    .decl-title{font-size:13px;font-weight:800;color:var(--red);margin-bottom:1.5mm}
-    .decl-text{font-size:12px;font-weight:700;line-height:2;color:#111;text-align:justify}
-    .decl-textarea{width:100%;border:none;outline:none;font-family:'Cairo',sans-serif;font-size:11.5px;font-weight:700;line-height:1.8;color:#111;text-align:justify;background:transparent;resize:none;padding:0;direction:rtl}
+    .decl-box{border:1.5px solid var(--primary);border-radius:5px;padding:4.5mm 5mm;background:#f9fbff}
+    .decl-title{font-size:14px;font-weight:800;color:var(--red);margin-bottom:1.5mm}
+    .decl-text{font-size:13px;font-weight:700;line-height:2;color:#111;text-align:justify}
+    .decl-textarea{width:100%;border:none;outline:none;font-family:'Cairo',sans-serif;font-size:13px;font-weight:700;line-height:1.8;color:#111;text-align:justify;background:transparent;resize:none;padding:0;direction:rtl}
 
     /* ── Notes ── */
-    .notes-box textarea{width:100%;border:1.5px dashed #999;border-radius:4px;padding:2px 7px;font-family:'Cairo',sans-serif;font-size:11.5px;font-weight:600;resize:none;outline:none;background:#fafcff;color:#111;line-height:1.7}
+    .notes-box textarea{width:100%;border:1.5px dashed #999;border-radius:4px;padding:2px 7px;font-family:'Cairo',sans-serif;font-size:13px;font-weight:600;resize:none;outline:none;background:#fafcff;color:#111;line-height:1.7}
 
     /* ── Signatures ── */
     .sig-row{display:flex;gap:10px;margin-top:2mm}
     .sig-block{flex:1}
-    .sig-lbl{font-size:12px;font-weight:800;color:var(--primary);margin-bottom:2mm}
-    .sig-line{border-bottom:1.5px dashed #777;height:25px;margin-top:5px}
+    .sig-lbl{font-size:14px;font-weight:800;color:var(--primary);margin-bottom:2mm}
+    .sig-line{border-bottom:1.5px dashed #777;height:28px;margin-top:5px}
 
     /* ── Footer ── */
-    .form-footer{display:flex;justify-content:space-between;font-size:10.5px;font-weight:600;color:#555;border-top:1.5px solid var(--primary);padding-top:2mm;margin-top:auto}
+    .form-footer{display:flex;justify-content:space-between;font-size:12px;font-weight:600;color:#555;border-top:1.5px solid var(--primary);padding-top:2mm;margin-top:auto}
 
     @media print {
       @page { size: A4; margin: 0; }
       * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
       body { background: #fff !important; padding: 0 !important; margin: 0 !important; }
-      .btn-download { display: none !important; }
+      .controls { display: none !important; }
       #form-sheet {
         box-shadow: none !important;
         width: 210mm !important;
@@ -103,10 +108,16 @@
 </head>
 <body>
 
-  <button class="btn-download" onclick="downloadPDF()" id="btn-pdf">
-    <svg viewBox="0 0 24 24"><path d="M12 16l-5-5h3V4h4v7h3l-5 5zm-7 2h14v2H5v-2z"/></svg>
-    تحميل النموذج PDF
-  </button>
+  <div class="controls">
+    <button class="btn-download" onclick="downloadPDF()" id="btn-pdf">
+      <svg viewBox="0 0 24 24"><path d="M12 16l-5-5h3V4h4v7h3l-5 5zm-7 2h14v2H5v-2z"/></svg>
+      تحميل النموذج PDF
+    </button>
+    <button class="btn-reset" onclick="resetForm()" id="btn-reset">
+      <svg viewBox="0 0 24 24"><path d="M17.65 6.35A7.958 7.958 0 0012 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08A5.99 5.99 0 0112 18c-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"/></svg>
+      تفريغ النموذج
+    </button>
+  </div>
 
   <div id="form-sheet">
 
@@ -140,7 +151,7 @@
         <td class="val"><input type="text" id="f-phone" placeholder="05xxxxxxxx"/></td>
       </tr>
       <tr>
-        <td class="lbl">رقم الهوية</td>
+        <td class="lbl">الرقم الوظيفي / الهوية</td>
         <td class="val"><input type="text" id="f-id" placeholder="1xxxxxxxxx"/></td>
         <td class="lbl">القسم</td>
         <td class="val"><input type="text" id="f-dept" placeholder="اسم القسم"/></td>
@@ -167,42 +178,42 @@
       <tbody>
         <tr>
           <td class="a-num">1</td><td class="a-name">جوال</td>
-          <td><input type="text" placeholder="..."/></td><td><input type="text" placeholder="..."/></td><td><input type="text" placeholder="..."/></td>
+          <td><input type="text" placeholder="..."/></td><td><input type="text" placeholder="..."/></td><td><select class="cond-select"><option value=""></option><option value="جديد">جديد</option><option value="مستعمل - بحالة جيدة">مستعمل - بحالة جيدة</option><option value="مستعمل - يحتاج صيانة">مستعمل - يحتاج صيانة</option></select></td>
           <td><div class="chk-cell"><label><input type="radio" name="a1"/> نعم</label><label><input type="radio" name="a1"/> لا</label></div></td>
         </tr>
         <tr>
           <td class="a-num">2</td><td class="a-name">لاب توب</td>
-          <td><input type="text" placeholder="..."/></td><td><input type="text" placeholder="..."/></td><td><input type="text" placeholder="..."/></td>
+          <td><input type="text" placeholder="..."/></td><td><input type="text" placeholder="..."/></td><td><select class="cond-select"><option value=""></option><option value="جديد">جديد</option><option value="مستعمل - بحالة جيدة">مستعمل - بحالة جيدة</option><option value="مستعمل - يحتاج صيانة">مستعمل - يحتاج صيانة</option></select></td>
           <td><div class="chk-cell"><label><input type="radio" name="a2"/> نعم</label><label><input type="radio" name="a2"/> لا</label></div></td>
         </tr>
         <tr>
           <td class="a-num">3</td><td class="a-name">كمبيوتر مكتبي</td>
-          <td><input type="text" placeholder="..."/></td><td><input type="text" placeholder="..."/></td><td><input type="text" placeholder="..."/></td>
+          <td><input type="text" placeholder="..."/></td><td><input type="text" placeholder="..."/></td><td><select class="cond-select"><option value=""></option><option value="جديد">جديد</option><option value="مستعمل - بحالة جيدة">مستعمل - بحالة جيدة</option><option value="مستعمل - يحتاج صيانة">مستعمل - يحتاج صيانة</option></select></td>
           <td><div class="chk-cell"><label><input type="radio" name="a3"/> نعم</label><label><input type="radio" name="a3"/> لا</label></div></td>
         </tr>
         <tr>
           <td class="a-num">4</td><td class="a-name">طابعة</td>
-          <td><input type="text" placeholder="..."/></td><td><input type="text" placeholder="..."/></td><td><input type="text" placeholder="..."/></td>
+          <td><input type="text" placeholder="..."/></td><td><input type="text" placeholder="..."/></td><td><select class="cond-select"><option value=""></option><option value="جديد">جديد</option><option value="مستعمل - بحالة جيدة">مستعمل - بحالة جيدة</option><option value="مستعمل - يحتاج صيانة">مستعمل - يحتاج صيانة</option></select></td>
           <td><div class="chk-cell"><label><input type="radio" name="a4"/> نعم</label><label><input type="radio" name="a4"/> لا</label></div></td>
         </tr>
         <tr>
           <td class="a-num">5</td><td class="a-name">ماسح ضوئي</td>
-          <td><input type="text" placeholder="..."/></td><td><input type="text" placeholder="..."/></td><td><input type="text" placeholder="..."/></td>
+          <td><input type="text" placeholder="..."/></td><td><input type="text" placeholder="..."/></td><td><select class="cond-select"><option value=""></option><option value="جديد">جديد</option><option value="مستعمل - بحالة جيدة">مستعمل - بحالة جيدة</option><option value="مستعمل - يحتاج صيانة">مستعمل - يحتاج صيانة</option></select></td>
           <td><div class="chk-cell"><label><input type="radio" name="a5"/> نعم</label><label><input type="radio" name="a5"/> لا</label></div></td>
         </tr>
         <tr>
           <td class="a-num">6</td><td class="a-name">شريحة جوال</td>
-          <td><input type="text" placeholder="..."/></td><td><input type="text" placeholder="..."/></td><td><input type="text" placeholder="..."/></td>
+          <td><input type="text" placeholder="..."/></td><td><input type="text" placeholder="..."/></td><td><select class="cond-select"><option value=""></option><option value="جديد">جديد</option><option value="مستعمل - بحالة جيدة">مستعمل - بحالة جيدة</option><option value="مستعمل - يحتاج صيانة">مستعمل - يحتاج صيانة</option></select></td>
           <td><div class="chk-cell"><label><input type="radio" name="a6"/> نعم</label><label><input type="radio" name="a6"/> لا</label></div></td>
         </tr>
         <tr>
           <td class="a-num">7</td><td class="a-name">مودم</td>
-          <td><input type="text" placeholder="..."/></td><td><input type="text" placeholder="..."/></td><td><input type="text" placeholder="..."/></td>
+          <td><input type="text" placeholder="..."/></td><td><input type="text" placeholder="..."/></td><td><select class="cond-select"><option value=""></option><option value="جديد">جديد</option><option value="مستعمل - بحالة جيدة">مستعمل - بحالة جيدة</option><option value="مستعمل - يحتاج صيانة">مستعمل - يحتاج صيانة</option></select></td>
           <td><div class="chk-cell"><label><input type="radio" name="a7"/> نعم</label><label><input type="radio" name="a7"/> لا</label></div></td>
         </tr>
         <tr>
-          <td class="a-num">8</td><td class="a-name">عهد أخرى</td>
-          <td><input type="text" placeholder="..."/></td><td><input type="text" placeholder="..."/></td><td><input type="text" placeholder="..."/></td>
+          <td class="a-num">8</td><td class="a-name">عهدة أخرى</td>
+          <td><input type="text" placeholder="..."/></td><td><input type="text" placeholder="..."/></td><td><select class="cond-select"><option value=""></option><option value="جديد">جديد</option><option value="مستعمل - بحالة جيدة">مستعمل - بحالة جيدة</option><option value="مستعمل - يحتاج صيانة">مستعمل - يحتاج صيانة</option></select></td>
           <td><div class="chk-cell"><label><input type="radio" name="a8"/> نعم</label><label><input type="radio" name="a8"/> لا</label></div></td>
         </tr>
       </tbody>
@@ -246,6 +257,18 @@
 
     function downloadPDF() {
       window.print();
+    }
+
+    function resetForm() {
+      if(confirm('هل أنت متأكد من مسح جميع بيانات النموذج؟')) {
+        const inputs = document.querySelectorAll('#form-sheet input[type="text"], #form-sheet textarea, #form-sheet select');
+        inputs.forEach(input => input.value = '');
+        
+        const radios = document.querySelectorAll('#form-sheet input[type="radio"]');
+        radios.forEach(radio => radio.checked = false);
+        
+        document.getElementById('today-date').value = `${yyyy}-${mm}-${dd}`;
+      }
     }
   </script>
 </body>
