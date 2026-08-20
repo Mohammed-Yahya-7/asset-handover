@@ -22,10 +22,10 @@
       overflow:hidden;
       background:#fff;
       box-shadow:0 4px 40px rgba(0,0,0,.13);
-      padding:7mm 10mm 6mm 10mm;
+      padding:10mm 12mm 10mm 12mm;
       display:flex;
       flex-direction:column;
-      gap:2mm;
+      gap:4.5mm;
     }
 
     /* ── Header ── */
@@ -39,8 +39,8 @@
     .form-title{text-align:center;font-size:18px;font-weight:800;color:var(--primary);letter-spacing:.3px}
 
     /* ── Operation ── */
-    .operation-row{display:flex;justify-content:space-between;align-items:center;padding:2mm 4mm;background:#eef2fa;border:1.5px solid #c5d3e8;border-radius:5px}
-    .operation-label{font-size:12.5px;font-weight:800;color:var(--primary)}
+    .operation-row{display:flex;justify-content:space-between;align-items:center;padding:3mm 5mm;background:#eef2fa;border:1.5px solid #c5d3e8;border-radius:5px}
+    .operation-label{font-size:13px;font-weight:800;color:var(--primary)}
     .chk-group{display:flex;gap:20px}
     .chk-item{display:flex;align-items:center;gap:5px;font-size:12.5px;font-weight:700;color:#111;cursor:pointer}
     .chk-item input[type=radio]{width:15px;height:15px;accent-color:var(--primary);cursor:pointer}
@@ -50,14 +50,14 @@
 
     /* ── Info table ── */
     .info-table{width:100%;border-collapse:collapse;font-size:11.5px}
-    .info-table td{border:1.5px solid var(--border);padding:2px 6px;vertical-align:middle}
+    .info-table td{border:1.5px solid var(--border);padding:6px 8px;vertical-align:middle}
     .info-table .lbl{font-weight:800;color:var(--primary);background:#eef2fa;width:88px;white-space:nowrap;font-size:11.5px}
     .info-table .val input{width:100%;border:none;outline:none;font-family:'Cairo',sans-serif;font-size:11.5px;font-weight:800;color:#000;background:transparent;padding:1px 0}
 
     /* ── Assets table ── */
     .assets-table{width:100%;border-collapse:collapse;font-size:11px}
-    .assets-table th{background:var(--primary);color:#fff;padding:4px 4px;text-align:center;border:1.5px solid var(--border);font-size:11.5px;font-weight:700}
-    .assets-table td{border:1.5px solid #444;padding:2px 4px;text-align:center;vertical-align:middle}
+    .assets-table th{background:var(--primary);color:#fff;padding:6px 4px;text-align:center;border:1.5px solid var(--border);font-size:11.5px;font-weight:700}
+    .assets-table td{border:1.5px solid #444;padding:6px 4px;text-align:center;vertical-align:middle}
     .assets-table tr:nth-child(even) td{background:#f5f8fd}
     .assets-table .a-name{text-align:right;font-weight:800;color:var(--primary);font-size:11.5px;white-space:nowrap}
     .assets-table .a-num{font-weight:800;color:var(--primary);width:20px;font-size:11.5px}
@@ -67,20 +67,19 @@
     .chk-cell input[type=radio]{width:12px;height:12px;accent-color:var(--primary);cursor:pointer}
 
     /* ── Declaration ── */
-    .decl-box{border:1.5px solid var(--primary);border-radius:5px;padding:2.5mm 5mm;background:#f9fbff}
-    .decl-title{font-size:12px;font-weight:800;color:var(--red);margin-bottom:1mm}
-    .decl-text{font-size:11.5px;font-weight:700;line-height:1.8;color:#111;text-align:justify}
+    .decl-box{border:1.5px solid var(--primary);border-radius:5px;padding:3.5mm 5mm;background:#f9fbff}
+    .decl-title{font-size:13px;font-weight:800;color:var(--red);margin-bottom:1.5mm}
+    .decl-text{font-size:12px;font-weight:700;line-height:2;color:#111;text-align:justify}
     .decl-textarea{width:100%;border:none;outline:none;font-family:'Cairo',sans-serif;font-size:11.5px;font-weight:700;line-height:1.8;color:#111;text-align:justify;background:transparent;resize:none;padding:0;direction:rtl}
 
     /* ── Notes ── */
     .notes-box textarea{width:100%;border:1.5px dashed #999;border-radius:4px;padding:2px 7px;font-family:'Cairo',sans-serif;font-size:11.5px;font-weight:600;resize:none;outline:none;background:#fafcff;color:#111;line-height:1.7}
 
     /* ── Signatures ── */
-    .sig-row{display:flex;gap:10px}
+    .sig-row{display:flex;gap:10px;margin-top:2mm}
     .sig-block{flex:1}
-    .sig-lbl{font-size:11.5px;font-weight:800;color:var(--primary);margin-bottom:1mm}
-    .sig-line{border-bottom:1.5px dashed #777;min-height:18px}
-    .sig-spacer{flex:1}
+    .sig-lbl{font-size:12px;font-weight:800;color:var(--primary);margin-bottom:2mm}
+    .sig-line{border-bottom:1.5px dashed #777;min-height:30px}
 
     /* ── Footer ── */
     .form-footer{display:flex;justify-content:space-between;font-size:10.5px;font-weight:600;color:#555;border-top:1.5px solid var(--primary);padding-top:2mm;margin-top:auto}
@@ -218,7 +217,7 @@
     <!-- Notes -->
     <div class="sec-title">ملاحظات</div>
     <div class="notes-box">
-      <textarea id="f-notes" rows="2" placeholder="أي ملاحظات إضافية..."></textarea>
+      <textarea id="f-notes" rows="4" placeholder="أي ملاحظات إضافية..."></textarea>
     </div>
 
     <!-- Signatures -->
@@ -229,8 +228,6 @@
       <div class="sig-block"><div class="sig-lbl">التاريخ:</div><div class="sig-line"></div></div>
       <div class="sig-block"><div class="sig-lbl">اعتماد المسؤول:</div><div class="sig-line"></div></div>
     </div>
-
-    <div class="sig-spacer"></div>
 
     <!-- Footer -->
     <div class="form-footer">
